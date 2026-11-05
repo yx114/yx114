@@ -40,7 +40,7 @@ LONGITUDE = 101.6869
 TIMEZONE = "Asia/Kuala_Lumpur"
 
 SEASONS = ("spring", "summer", "autumn", "winter")
-SEASON_HOLD_SECONDS = 20  # Change to 30 for a more relaxed garden
+SEASON_HOLD_SECONDS = 8  # Change to 30 for a more relaxed garden
 SEASON_TRANSITION_SECONDS = 2  # Gentle cross-fade at the end of each season
 
 WEATHER_OPTIONS = (
