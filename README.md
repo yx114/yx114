@@ -19,11 +19,20 @@
   <img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" />
 </div>
 
-## 🐍 Contribution Snake
+*My backpack includes tools from current coursework/projects plus topics I'm exploring. I'm still learning!*
+
+## 🐍 Farm Activity
 
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-USERNAME/output/github-snake-dark.svg" />
     <img src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-USERNAME/output/github-snake.svg" width="900" alt="Animated snake eating Adda's GitHub contributions" />
+  </picture>
+</div>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-night.svg" />
+        <img src="assets/footer-day.svg" width="900" alt="Pixel-art farm footer with a sleeping cat" />
   </picture>
 </div>

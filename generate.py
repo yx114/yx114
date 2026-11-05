@@ -11,7 +11,7 @@ import random
 
 # ======================= PERSONAL CONFIG =======================
 # Adda's pixel-farm GitHub profile. Change these whenever your skills grow.
-NAME = "Hi, I'm Adda! 👋"
+NAME = "Adda"
 TAGLINE = "PLANTING CODE, GROWING DREAMS"
 FOOTER_TEXT = "THANKS FOR VISITING!"
 
@@ -20,22 +20,61 @@ FOOTER_TEXT = "THANKS FOR VISITING!"
 # Each icon is 1-2 letters and labels should be six letters or fewer.
 BACKPACK = [
     ("LANGUAGES", [
-        ("KOTLIN", "KT", "#7f52ff"),
-        ("JAVA", "JV", "#d1492e"),
         ("PYTHON", "PY", "#3776ab"),
-        ("SQL", "SQ", "#2f8f83"),
+        ("JAVA", "JV", "#d1492e"),
+        ("KOTLIN", "KT", "#7f52ff"),
+        ("TS", "TS", "#3178c6"),  # TypeScript
+        ("JS", "JS", "#c9a400"),  # JavaScript
     ]),
+
+    ("MORE LANG", [
+        ("HASK", "HS", "#5d4f85"),  # Haskell
+        ("C++", "C+", "#5a6bb5"),
+    ]),
+
+    ("DATA", [
+        ("SQL", "SQ", "#2f8f83"),
+        ("ROOM", "RM", "#4c75a3"),
+        ("JSON", "JN", "#64748b"),
+    ]),
+
     ("TOOLS", [
         ("GIT", "GT", "#f05032"),
-        ("STUDIO", "AS", "#3a9d5d"),
-        ("ROOM", "RM", "#4c75a3"),
         ("GITHUB", "GH", "#555555"),
+        ("AS", "AS", "#3a9d5d"),  # Android Studio
+        ("DOCK", "DK", "#2496ed"),  # Docker
+        ("GHCI", "HI", "#7667a8"),
     ]),
+
+    ("FUNCTIONAL", [
+        ("LAMBDA", "LC", "#9361a8"),
+        ("HOF", "HF", "#8a70c2"),
+        ("MONAD", "MO", "#6f63a9"),
+        ("PARSE", "PC", "#a06abb"),
+        ("RECUR", "RC", "#9b7bbd"),
+    ]),
+
+    ("REACTIVE", [
+        ("RXJS", "RX", "#b7178c"),
+        ("FRP", "FR", "#a83c96"),
+        ("OBS", "OB", "#c05296"),
+        ("OPS", "SO", "#a65a9f"),
+        ("STATE", "SM", "#8b5ba9"),
+    ]),
+
+    ("PARALLEL", [
+        ("MPI", "MP", "#d9643a"),
+        ("OMP", "OM", "#278a8a"),  # OpenMP
+        ("TOPO", "NT", "#64748b"),
+        ("PERF", "PF", "#d69e32"),
+    ]),
+
     ("EXPLORING", [
         ("AI", "AI", "#8a4fc7"),
         ("WEB", "WB", "#3a9d5d"),
-        ("MOBILE", "MB", "#d17f30"),
-        ("DATA", "DT", "#2f8f83"),
+        ("MOB", "MB", "#d17f30"),
+        ("CUDA", "CU", "#76b900"),
+        ("MINIZ", "MZ", "#5c8d89"),
     ]),
 ]
 OUT_DIR = "assets"
