@@ -1,48 +1,55 @@
-## Hi there 👋
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-night.svg" />
+    <img src="assets/banner-day.svg" width="900" alt="Pixel farm banner: YOUR NAME, CS student at Monash University Malaysia" />
+  </picture>
+</div>
 
-## About Me
+<div align="center">
 
-I'm an aspiring software developer who enjoys learning new technologies and solving problems through programming.
+**Hi, I'm YOUR NAME 👋 — a Computer Science student at Monash University Malaysia.**
+<br/>
+I like building things, breaking them, and learning why they broke.
 
-I'm currently building my programming skills and exploring different areas of computer science, including software engineering, web development, and data analysis.
+</div>
 
-## What I'm Currently Learning
+<div align="center"><img src="assets/divider.svg" width="900" alt="" /></div>
 
-- Python programming
-- HTML, CSS, and JavaScript
-- Git and GitHub
-- Problem-solving and programming fundamentals
+## 📜 Quest Log
 
-## Projects I'm Working On
+<!-- EDIT: replace these with your real projects / goals -->
+- 🔨 **Currently working on:** your project here
+- 🌱 **Currently learning:** a topic you're studying
+- 🤝 **Looking for:** internships, collaborations, or study buddies
+- 📫 **Reach me:** your email or LinkedIn
 
-- **Personal Expense Tracker** — A Python program for tracking income and expenses.
-- **Student Study Planner** — A website for organizing assignments and deadlines.
-- **Student Performance Analysis** — A Python project for analyzing and visualizing data.
+<div align="center"><img src="assets/divider.svg" width="900" alt="" /></div>
 
-*I'm currently learning and building these projects. More updates coming soon!*
+## 🎒 Backpack
 
-## My Goals
+<div align="center">
+  <img src="assets/backpack.svg" width="700" alt="Inventory of skills: Python, Java, C, JS, SQL, Git, Linux, Docker" />
+</div>
 
-- Improve my programming and problem-solving skills
-- Build useful applications
-- Gain hands-on development experience
-- Prepare for future internship opportunities
+<div align="center"><img src="assets/divider.svg" width="900" alt="" /></div>
 
-## Connect With Me
+## 🐍 Farm Activity
 
-- LinkedIn: Coming soon
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-USERNAME/output/snake-dark.svg" />
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-USERNAME/output/snake.svg" />
+  </picture>
+</div>
 
-<!--
-**yx114/yx114** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<br/>
 
-Here are some ideas to get you started:
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-night.svg" />
+    <img src="assets/footer-day.svg" width="900" alt="A cat sleeping on a hay bale: thanks for visiting" />
+  </picture>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+![Profile Views](https://komarev.com/ghpvc/?username=YOUR-USERNAME&label=Visitors&color=74bd3f&style=flat)
+
+</div>
