@@ -15,11 +15,28 @@
   <img src="assets/backpack.svg" width="700" alt="Pixel-art inventory of programming languages, development tools, and interests" />
 </div>
 
+*My backpack includes tools from current coursework/projects plus topics I'm exploring. I'm still learning!*
+
 <div align="center">
   <img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" />
 </div>
 
-*My backpack includes tools from current coursework/projects plus topics I'm exploring. I'm still learning!*
+## 🔥 Coding Streak
+
+<div align="center">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="streak-night.svg"
+    />
+    <img
+      src="streak.svg"
+      width="495"
+      alt="Adda's GitHub contribution streak"
+    />
+  </picture>
+</div>
+
 
 ## 🐍 Farm Activity
 
@@ -42,4 +59,8 @@
     <source media="(prefers-color-scheme: dark)" srcset="assets/footer-night.svg" />
         <img src="assets/footer-day.svg" width="900" alt="Pixel-art farm footer with a sleeping cat" />
   </picture>
+</div>
+
+<div align="center">
+  <img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" />
 </div>
