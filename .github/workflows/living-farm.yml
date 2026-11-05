@@ -1,0 +1,44 @@
+name: Update Kuala Lumpur living farm
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Four runs per hour, away from minute zero to reduce congestion.
+    - cron: "7,22,37,52 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - "generate.py"
+      - "living_farm.py"
+      - ".github/workflows/living-farm.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: yx114-living-farm
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout profile source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Render both themes using Kuala Lumpur weather and sunrise/sunset
+        run: python3 living_farm.py --out dist
+
+      - name: Publish generated SVGs to farm-output
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: farm-output
+          publish_dir: ./dist
+          force_orphan: true

@@ -1,6 +1,21 @@
 <div align="center">
-  <img src="assets/banner.svg" width="900" alt="Adda's pixel-art coding farm banner" />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/yx114/yx114/farm-output/banner-dark.svg"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/yx114/yx114/farm-output/banner-light.svg"
+    />
+    <img
+      src="https://raw.githubusercontent.com/yx114/yx114/farm-output/banner-light.svg"
+      width="900"
+      alt="Adda's Living Pixel Farm"
+    />
+  </picture>
 </div>
+
 
 <div align="center">
   <img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" />
@@ -47,9 +62,25 @@
   </picture>
 </div>
 
+
 <div align="center">
-  <img src="assets/footer.svg" width="900" alt="Pixel-art farm footer with a sleeping cat" />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/yx114/yx114/farm-output/footer-dark.svg"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/yx114/yx114/farm-output/footer-light.svg"
+    />
+    <img
+      src="https://raw.githubusercontent.com/yx114/yx114/farm-output/footer-light.svg"
+      width="900"
+      alt="Adda's Living Pixel Farm footer"
+    />
+  </picture>
 </div>
+
 
 <div align="center">
   <img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" />
