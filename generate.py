@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Generates the pixel-art SVGs for a farm-style GitHub profile README.
+The Living Farm imports these drawings, using separate theme and sun/moon settings.
 All art is drawn from scratch with code (original, not taken from any game).
 
 Edit the CONFIG block, then run:   python3 generate.py
@@ -375,7 +376,14 @@ CLOUD_B = ["...####..", ".#######.", "#########", ".sssssss."]
 
 
 # ---------------- banner ----------------
-def banner(P):
+def banner(P, celestial_night=None):
+    """Draw a banner. P['night'] is the COLOR THEME, not necessarily KL night.
+
+    celestial_night is the actual Kuala Lumpur day/night state. When omitted,
+    retain the original combined behavior for standalone generate.py output.
+    """
+    if celestial_night is None:
+        celestial_night = P['night']
     W, H = 225, 96
     tw = max(text_width(NAME, 2), text_width(TAGLINE, 1))
     pw = max(tw + 18, 120)
@@ -385,18 +393,18 @@ def banner(P):
 
     sky = Canvas(W, H)
     sky_bands(sky, P, P['sky'], 8, 0, fill_to=70)
-    sun_or_moon(sky, P, 213, 12)
+    sun_or_moon(sky, {**P, "night": celestial_night}, 213, 12)
 
     parts = [layer(sky)]
 
-    if P['night']:
+    if celestial_night:
         s1, s2 = Canvas(W, H), Canvas(W, H)
         for i in range(34):
             x, y = rng.randint(2, W - 3), rng.randint(2, 50)
             if pxl - 2 <= x <= pxl + pw + 2 and pyt - 2 <= y <= pyt + ph + 2:
                 continue
             tgt = s1 if i % 2 == 0 else s2
-            col = "#ffffff" if i % 3 else "#ffe9a8"
+            col = ("#ffffff" if i % 3 else "#ffe9a8") if P["night"] else ("#43617d" if i % 3 else "#82645b")
             tgt.px(x, y, col)
             if i % 5 == 0:
                 for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
@@ -500,7 +508,7 @@ def banner(P):
     f.rect(x0 + 27, 74, 10, 7, P['glass'])
     f.rect(x0 + 32, 74, 1, 7, "#4a2a12")
     f.rect(x0 + 27, 77, 10, 1, "#4a2a12")
-    if P['night']:
+    if celestial_night:
         f.rect(x0 + 27, 74, 5, 3, "#ffe9a8")
     else:
         f.px(x0 + 28, 75, shade(P['glass'], 0.7)); f.px(x0 + 29, 75, shade(P['glass'], 0.7))
@@ -536,7 +544,7 @@ def banner(P):
                               'k': "#222222", 'o': "#f0a030", 'g': "#d4d4d4" if not P['night'] else "#aab0c8"})
     parts.append(layer(ch, "pk"))
 
-    if P['night']:
+    if celestial_night:
         for i, (fx_, fy_) in enumerate([(60, 66), (120, 90), (176, 70), (40, 92), (140, 66), (100, 68)]):
             fl = Canvas(W, H)
             fl.px(fx_, fy_, "#fff59a")
@@ -594,19 +602,22 @@ def backpack():
 
 
 # ---------------- footer ----------------
-def footer(P):
+def footer(P, celestial_night=None):
+    """Draw a footer with an independent real-world sun/moon selection."""
+    if celestial_night is None:
+        celestial_night = P['night']
     W, H = 225, 52
     rng = random.Random(5)
     sky = Canvas(W, H)
     sky_bands(sky, P, P['sky'][1:6], 5, 0, fill_to=30)
-    sun_or_moon(sky, P, 14, 11)
+    sun_or_moon(sky, {**P, "night": celestial_night}, 14, 11)
     parts = [layer(sky)]
-    if P['night']:
+    if celestial_night:
         s1, s2 = Canvas(W, H), Canvas(W, H)
         for i in range(22):
             x, y = rng.randint(30, W - 3), rng.randint(1, 20)
             tgt = s1 if i % 2 == 0 else s2
-            tgt.px(x, y, "#ffffff")
+            tgt.px(x, y, "#ffffff" if P["night"] else "#486781")
             if i % 5 == 0:
                 for dx, dy in ((-1, 0), (1, 0), (0, -1), (0, 1)):
                     tgt.px(x + dx, y + dy, "#ffffff")
@@ -650,7 +661,7 @@ def footer(P):
     zc2.text(199, 14, "Z", "#ffffff" if P['night'] else "#6a7ab0", 1)
     parts.append(layer(zc2, "zz", "animation-delay:-1.5s"))
 
-    if P['night']:
+    if celestial_night:
         for i, (fx_, fy_) in enumerate([(30, 36), (80, 44), (130, 34), (160, 46), (60, 32)]):
             fl = Canvas(W, H)
             fl.px(fx_, fy_, "#fff59a")

@@ -5,8 +5,12 @@ The Kuala Lumpur weather and sunrise/sunset determine the rendered weather and
 sun/moon. The four seasons are **fictional, decorative themes**, shown in their
 natural order: spring -> summer -> autumn -> winter, 20 seconds each.
 
-When invoked by GitHub Actions, the script refreshes assets/banner.svg and
-assets/footer.svg. The seasons animate inside SVG between workflow updates.
+When invoked by GitHub Actions, the script generates FOUR SVGs:
+  banner-light.svg and banner-dark.svg
+  footer-light.svg and footer-dark.svg
+The README uses <picture> to follow the visitor's GitHub color scheme. Both
+color themes display the same actual KL sun or moon (chosen at generation time).
+The seasons animate inside each SVG between workflow updates.
 GitHub Actions is not a real-time clock: sunrise/sunset and weather may lag by
 roughly one scheduled update (or longer if GitHub delays the workflow).
 
@@ -239,15 +243,19 @@ def extra_weather_art(weather, windy, night, role):
     return "".join(overlay)
 
 
-def render_scene(weather, season, night, windy, role):
-    palette = modify_palette(farm.NIGHT if night else farm.DAY, season, weather)
-    generated = farm.banner(palette) if role == "banner" else farm.footer(palette)
+def render_scene(weather, season, night, windy, role, dark_theme=False):
+    # Two independent inputs:
+    # dark_theme -> GitHub light/dark palette (one SVG per theme)
+    # night      -> actual Kuala Lumpur sunset/sunrise, shared by both SVGs
+    palette = modify_palette(farm.NIGHT if dark_theme else farm.DAY, season, weather)
+    generated = (farm.banner(palette, celestial_night=night)
+                 if role == "banner" else farm.footer(palette, celestial_night=night))
     inner = generated.split("</style>", 1)[1].rsplit("</svg>", 1)[0]
 
     # In dense cloud or rain, original twinkling stars would look out of place.
     if night and weather in {"cloudy", "drizzle", "rainy", "showers", "stormy", "foggy"}:
         inner = re.sub(r'<g class="t[12]">.*?</g>', "", inner)
-    return inner + extra_weather_art(weather, windy, night, role)
+    return inner + extra_weather_art(weather, windy, dark_theme, role)
 
 
 def season_animation_css(hold=SEASON_HOLD_SECONDS, transition=SEASON_TRANSITION_SECONDS):
@@ -288,25 +296,26 @@ def season_animation_css(hold=SEASON_HOLD_SECONDS, transition=SEASON_TRANSITION_
     return "".join(css)
 
 
-def build_svg(role, weather, night, windy=False, fixed_season=None):
+def build_svg(role, weather, night, windy=False, fixed_season=None, *, dark_theme=False):
     if weather not in WEATHER_OPTIONS:
         raise ValueError(f"Unknown weather state: {weather}")
     w, h = 225, (96 if role == "banner" else 52)
     if fixed_season:
         if fixed_season not in SEASONS:
             raise ValueError(f"Unknown season: {fixed_season}")
-        groups = f'<g>{render_scene(weather, fixed_season, night, windy, role)}</g>'
+        groups = f'<g>{render_scene(weather, fixed_season, night, windy, role, dark_theme)}</g>'
         css = season_animation_css()  # only weather animations are used here
     else:
         groups = "".join(
-            f'<g class="season season-{i}">{render_scene(weather, season, night, windy, role)}</g>'
+            f'<g class="season season-{i}">{render_scene(weather, season, night, windy, role, dark_theme)}</g>'
             for i, season in enumerate(SEASONS)
         )
         css = season_animation_css()
     label = weather.replace("_", " ").title()
     cycle_description = "Fixed " + fixed_season if fixed_season else "Decorative spring, summer, autumn, winter loop"
-    description = (f"Adda's Kuala Lumpur pixel farm. {label} weather. "
-                   f"{'Moon' if night else 'Sun'} based on local sunrise and sunset. {cycle_description}.")
+    description = (f"Adda's Kuala Lumpur pixel farm in {'dark' if dark_theme else 'light'} mode. "
+                   f"{label} weather. {'Moon' if night else 'Sun'} based on KL sunrise/sunset. "
+                   f"{cycle_description}.")
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
         f'width="{w * 4}" height="{h * 4}" shape-rendering="crispEdges" '
@@ -350,13 +359,14 @@ def main(argv=None):
 
     args.out.mkdir(parents=True, exist_ok=True)
     for role in ("banner", "footer"):
-        output = args.out / f"{role}.svg"
-        svg = build_svg(role, weather, night, windy, args.season)
-        if output.exists() and output.read_text(encoding="utf-8") == svg:
-            print(f"Unchanged: {output}")
-        else:
-            output.write_text(svg, encoding="utf-8")
-            print(f"Updated: {output}")
+        for theme_name, dark_theme in (("light", False), ("dark", True)):
+            output = args.out / f"{role}-{theme_name}.svg"
+            svg = build_svg(role, weather, night, windy, args.season, dark_theme=dark_theme)
+            if output.exists() and output.read_text(encoding="utf-8") == svg:
+                print(f"Unchanged: {output}")
+            else:
+                output.write_text(svg, encoding="utf-8")
+                print(f"Updated: {output}")
     return 0
 
 
