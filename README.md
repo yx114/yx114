@@ -1,15 +1,11 @@
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-night.svg" />
-    <img src="assets/banner-day.svg" width="900" alt="Adda's pixel-art coding farm banner" />
-  </picture>
+  <img src="assets/banner.svg" width="900" alt="Adda's pixel-art coding farm banner" />
 </div>
 
 <div align="center">
   <img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" />
 </div>
 
-## 🎒 Backpack
 
 <div align="center">
   <img src="assets/backpack.svg" width="700" alt="Pixel-art inventory of programming languages, development tools, and interests" />
@@ -21,7 +17,6 @@
   <img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" />
 </div>
 
-## 🔥 Coding Streak
 
 <div align="center">
   <picture>
@@ -38,8 +33,6 @@
 </div>
 
 
-## 🐍 Farm Activity
-
 <div align="center">
   <picture>
     <source
@@ -55,10 +48,7 @@
 </div>
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/footer-night.svg" />
-        <img src="assets/footer-day.svg" width="900" alt="Pixel-art farm footer with a sleeping cat" />
-  </picture>
+  <img src="assets/footer.svg" width="900" alt="Pixel-art farm footer with a sleeping cat" />
 </div>
 
 <div align="center">

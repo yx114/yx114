@@ -11,7 +11,7 @@ import random
 
 # ======================= PERSONAL CONFIG =======================
 # Adda's pixel-farm GitHub profile. Change these whenever your skills grow.
-NAME = "Adda"
+NAME = "Adda Farm"
 TAGLINE = "PLANTING CODE, GROWING DREAMS"
 FOOTER_TEXT = "THANKS FOR VISITING!"
 
