@@ -25,8 +25,15 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-USERNAME/output/github-snake-dark.svg" />
-    <img src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-USERNAME/output/github-snake.svg" width="900" alt="Animated snake eating Adda's GitHub contributions" />
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/yx114/yx114/output/github-snake-dark.svg"
+    />
+    <img
+      src="https://raw.githubusercontent.com/yx114/yx114/output/github-snake.svg"
+      width="900"
+      alt="Animated snake eating Adda's GitHub contributions"
+    />
   </picture>
 </div>
 
