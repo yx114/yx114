@@ -1,55 +1,71 @@
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/banner-night.svg" />
-    <img src="assets/banner-day.svg" width="900" alt="Pixel farm banner: YOUR NAME, CS student at Monash University Malaysia" />
+    <img src="assets/banner-day.svg" width="900" alt="Pixel farm banner introducing Adda, a computer science student at Monash University Malaysia" />
   </picture>
 </div>
 
 <div align="center">
 
-**Hi, I'm YOUR NAME 👋 — a Computer Science student at Monash University Malaysia.**
-<br/>
-I like building things, breaking them, and learning why they broke.
+### Hi, I'm Adda! 👋
+
+**Computer Science student at Monash University Malaysia**  
+Exploring software development, mobile apps, and how AI can make everyday tools more useful.
+
+I like turning ideas into working projects and learning along the way.
 
 </div>
 
-<div align="center"><img src="assets/divider.svg" width="900" alt="" /></div>
+<div align="center"><img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" /></div>
 
 ## 📜 Quest Log
 
-<!-- EDIT: replace these with your real projects / goals -->
-- 🔨 **Currently working on:** your project here
-- 🌱 **Currently learning:** a topic you're studying
-- 🤝 **Looking for:** internships, collaborations, or study buddies
-- 📫 **Reach me:** your email or LinkedIn
+- 🔨 **Building:** **NutriTrack Pro** — an Android meal-tracking app with meal photos, nutrition history and optional personal health information.
+- 🧠 **Exploring:** AI-assisted meal observations and practical, privacy-conscious app design.
+- 🌱 **Learning more about:** Python, web development and GitHub workflows.
+- 🎯 **Goal:** Grow a portfolio for software, mobile and other computing internships.
 
-<div align="center"><img src="assets/divider.svg" width="900" alt="" /></div>
+## 🛠️ Featured Project
+
+### NutriTrack Pro · Android app (in development)
+
+A personal food diary that aims to help users reflect on their meals over time.
+
+**Tech stack:** Kotlin · Jetpack Compose · Room · Android
+
+**Current prototype / planned improvements:**
+- Capture or choose meal photos
+- Keep a local history of meals and analysis
+- Add optional weight, height and laboratory notes
+- Connect AI to provide general meal-balance observations (integration and testing in progress)
+
+> AI observations are informational only, not a diagnosis or a substitute for professional medical advice. No personal medical records or API secrets are included in the public portfolio.
+
+**Repository link:** Add the NutriTrack Pro repository link here once you publish and test it.
+
+<div align="center"><img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" /></div>
 
 ## 🎒 Backpack
 
 <div align="center">
-  <img src="assets/backpack.svg" width="700" alt="Inventory of skills: Python, Java, C, JS, SQL, Git, Linux, Docker" />
+  <img src="assets/backpack.svg" width="700" alt="Pixel inventory of coding languages, tools and learning interests" />
 </div>
 
-<div align="center"><img src="assets/divider.svg" width="900" alt="" /></div>
+*My backpack includes tools from current coursework/projects plus topics I'm exploring. I'm still learning!*
 
-## 🐍 Farm Activity
+<div align="center"><img src="assets/divider.svg" width="900" alt="Pixel-art floral divider" /></div>
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-USERNAME/output/snake-dark.svg" />
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-USERNAME/output/snake.svg" />
-  </picture>
-</div>
+## 🌻 What's Next?
 
-<br/>
+- [ ] Test NutriTrack Pro end-to-end on an Android device
+- [ ] Improve meal-history and photo-capture experience
+- [ ] Add a secure AI backend and clearly communicate limitations
+- [ ] Publish a short demo and screenshots of the app
+- [ ] Build another small project in Python or web development
 
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/footer-night.svg" />
-    <img src="assets/footer-day.svg" width="900" alt="A cat sleeping on a hay bale: thanks for visiting" />
+    <img src="assets/footer-day.svg" width="900" alt="Pixel-art farm footer with a sleeping cat" />
   </picture>
-
-![Profile Views](https://komarev.com/ghpvc/?username=YOUR-USERNAME&label=Visitors&color=74bd3f&style=flat)
-
 </div>

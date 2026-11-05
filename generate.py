@@ -9,19 +9,34 @@ import math
 import os
 import random
 
-# ======================= CONFIG (edit me) =======================
-NAME = "YOUR NAME"                         # letters / digits only look best
+# ======================= PERSONAL CONFIG =======================
+# Adda's pixel-farm GitHub profile. Change these whenever your skills grow.
+NAME = "ADDA"
 TAGLINE = "CS STUDENT - MONASH MALAYSIA"
-FOOTER_TEXT = "THANKS FOR VISITING!"
+FOOTER_TEXT = "ONE PROJECT AT A TIME!"
 
-# (row title, [(label under slot, 1-2 letter icon text, tile colour), ...])
+# Skill inventory. These labels describe your current project tech and
+# areas you are actively exploring; adjust if any entry isn't accurate.
+# Each icon is 1-2 letters and labels should be six letters or fewer.
 BACKPACK = [
-    ("LANGUAGES", [("PYTHON", "PY", "#3776ab"), ("JAVA", "JV", "#d1492e"),
-                   ("C", "C", "#5a6bb5"), ("JS", "JS", "#c9a400"),
-                   ("SQL", "SQ", "#2f8f83")]),
-    ("TOOLS", [("GIT", "GT", "#d1492e"), ("LINUX", "LX", "#4a4a4a"),
-               ("DOCKER", "DK", "#2d8fd5")]),
-    ("LEARNING", [("AI", "AI", "#8a4fc7"), ("WEB", "WB", "#3a9d5d")]),
+    ("LANGUAGES", [
+        ("KOTLIN", "KT", "#7f52ff"),
+        ("JAVA", "JV", "#d1492e"),
+        ("PYTHON", "PY", "#3776ab"),
+        ("SQL", "SQ", "#2f8f83"),
+    ]),
+    ("TOOLS", [
+        ("GIT", "GT", "#f05032"),
+        ("STUDIO", "AS", "#3a9d5d"),
+        ("ROOM", "RM", "#4c75a3"),
+        ("GITHUB", "GH", "#555555"),
+    ]),
+    ("EXPLORING", [
+        ("AI", "AI", "#8a4fc7"),
+        ("WEB", "WB", "#3a9d5d"),
+        ("MOBILE", "MB", "#d17f30"),
+        ("DATA", "DT", "#2f8f83"),
+    ]),
 ]
 OUT_DIR = "assets"
 # ================================================================
@@ -641,7 +656,7 @@ def main():
         "divider.svg": divider(),
     }
     for name, content in files.items():
-        with open(os.path.join(OUT_DIR, name), "w") as fh:
+        with open(os.path.join(OUT_DIR, name), "w", encoding="utf-8") as fh:
             fh.write(content)
         print(f"{name}: {len(content) / 1024:.1f} KB")
 
