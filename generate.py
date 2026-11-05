@@ -11,9 +11,9 @@ import random
 
 # ======================= PERSONAL CONFIG =======================
 # Adda's pixel-farm GitHub profile. Change these whenever your skills grow.
-NAME = "ADDA"
-TAGLINE = "CS STUDENT - MONASH MALAYSIA"
-FOOTER_TEXT = "ONE PROJECT AT A TIME!"
+NAME = "Hi, I'm Adda! 👋"
+TAGLINE = "PLANTING CODE, GROWING DREAMS"
+FOOTER_TEXT = "THANKS FOR VISITING!"
 
 # Skill inventory. These labels describe your current project tech and
 # areas you are actively exploring; adjust if any entry isn't accurate.
